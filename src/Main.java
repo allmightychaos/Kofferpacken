@@ -7,12 +7,9 @@ public class Main {
         int fehlerCounter = 0;
 
         System.out.println("Willkommen zu Kofferpacken! Beenden mit \"exit\" oder \"end\".");
-        System.out.print("Möchtest du die Reihenfolge nach jeder richtigen Eingabe sehen? (Ja/Nein): ");
-        String antwort = scanner.nextLine();
-        if (antwort.equalsIgnoreCase("exit") || antwort.equalsIgnoreCase("end")) {
-            System.out.println("Spiel beendet!");
-            return;
-        }
+        System.out.println("Du darfst maximal 3 Fehler machen.\n\nDrücke 'Enter' um fortzufahren");
+        scanner.nextLine();
+        clearScreen();
 
         promptAndAddPackstueck("erstes", koffer, scanner);
         promptAndAddPackstueck("zweites", koffer, scanner);
